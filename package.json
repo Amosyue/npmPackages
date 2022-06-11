@@ -1,14 +1,21 @@
 {
   "name": "a",
   "version": "1.0.0",
-  "description": "多个前端项目中公共组件使用方案（npm包方式）",
+  "description": "多个前端项目中公共组件使用方案（npm包方式） && (cd server && npm run start)",
   "main": "index.js",
   "dependencies": {
     "concurrently": "^7.2.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "all": "concurrently \"vue-cli-service serve --mode development\" \"cd mock && node --experimental-modules ./mock.mjs\"",
+    "servea": "concurrently \"npm:server:*\"",
+    "dev":"(cd commonpack && npm run serve)",
+    "server:commonpack": "cd commonpack && npm run server",
+    "server:packageone": "cd packageone && npm run server",
+    "server:packagetwo": "cd packagetwo && npm run server",
+    "serve": "(cd commonpack && npm run serve) && (cd packageone && npm run serve) && (cd packagetwo && npm run serve)"
   },
   "repository": {
     "type": "git",
