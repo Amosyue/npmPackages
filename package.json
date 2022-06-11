@@ -1,0 +1,23 @@
+{
+  "name": "a",
+  "version": "1.0.0",
+  "description": "多个前端项目中公共组件使用方案（npm包方式）",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^7.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amosyue/npmPackages.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amosyue/npmPackages/issues"
+  },
+  "homepage": "https://github.com/Amosyue/npmPackages#readme"
+}
